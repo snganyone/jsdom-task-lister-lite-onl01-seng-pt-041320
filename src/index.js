@@ -6,8 +6,10 @@ document.addEventListener("DOMContentLoaded", () => {
   const todos = document.getElementById("tasks");
 
   form.addEventListener("submit", (event) => {
-    todos.innerHTML += description.value;
+    todos.innerHTML += `${description.value}<br>`;
     event.preventDefault();
-    }, false);
+    //console.log(event);
+    event.target.reset();
+    });
 
   });
